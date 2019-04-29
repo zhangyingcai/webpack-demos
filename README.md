@@ -27,5 +27,30 @@ npm init
 我们使用最新的的4+版本
 
 ```
-npm install --save-dev webpack-cli
+npm install --save-dev webpack
+```
+
+## Entry_file
+
+webpack.config.js
+```
+const path = require('path')
+module.exports = {
+    entry: './Entry_file/main.js',
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, './')
+    }
+  };
+```
+build
+```
+npx webpack --config .\Entry_file\webpack.config.js
+```
+
+## css_loader
+
+javascript import css files
+```
+npm install --save-dev style-loader css-loader
 ```
